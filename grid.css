@@ -1,0 +1,13 @@
+#tHeading{
+	color:#CFD8DC;
+	background-color:#000000;
+}
+#tHeading th{
+	text-align:center;
+}
+.gridNumber {
+	text-align:right;
+}
+.gridCheckBox{
+	text-align:center;
+}

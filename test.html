@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Grid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="grid.js"></script>
+<link rel="stylesheet" type="text/css" href="grid.css">
+</head>
+<body>
+
+<div id = 'customGrid' class="container"></div>
+<script>
+	var id = document.getElementById('customGrid');
+	var config = {
+		column_def : [{column_name:"Name",column_id:"name",data_type:"string",formatter:"test.html"},
+					{column_name:"Age",column_id:"age",data_type:"integer",cssClass:"gridNumber"},
+					{column_name:"Country",column_id:"country",data_type:"string"},
+					{column_name:"Email",column_id:"email",data_type:"string"},
+					{column_name:"Contact No",column_id:"contactNo",data_type:"integer",cssClass:"gridNumber"},],
+		data : [["Derek",24,"India","derk@udemy.com",8981252736],["Annie",21,"America","annie008@gmail.com",8800974347],["Paul",25,"Namibia","paul91@yahoo.co.in",7278468747],["Mark",23,"Australia","markisbest@yahoo.co.in",7278454657]],
+		button_config : {
+			consolidateAction: true,
+			consolidateAttribute: {type: "check"}
+		}
+	};
+	GRID_GEN.generate(config,id);
+</script>
+
+</body>
+</html
